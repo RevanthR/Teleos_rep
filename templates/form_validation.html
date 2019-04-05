@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="Dashboard">
+  <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+  <title>Sign Up</title>
+
+  <!-- Favicons -->
+  <link href="{{url_for('static',filename='img/favicon.png')}}" rel="icon">
+  <link href="{{url_for('static',filename='img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+  <!-- Bootstrap core CSS -->
+  <link href="{{url_for('static',filename='lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <!--external css-->
+  <link href="{{url_for('static',filename='lib/font-awesome/css/font-awesome.css')}}" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="{{url_for('static',filename='css/form_style.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='css/style-responsive.css')}} rel="stylesheet">
+  
+</head>
+
+<body>
+
+        
+  <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+  <div id="login-page"><!--<div class="container">-->
+     <form name="RegForm" onsubmit="return GEEKFORGEEKS()" method="post" class="form-login" action="teamleader.html">
+        <h2 class="form-login-heading">create an account</h2>
+<div class="row mt">
+          <div class="col-lg-12">
+          <!--  <h4><i class="fa fa-angle-right"></i> Advanced Form Validations</h4>-->
+            <!--<div class="form-panel">-->
+              <div class="form" >
+             <!-- <form class="cmxform form-horizontal style-form" id="signupForm" method="get" action="index.html">-->
+                  <div class="form-group ">
+                    <label for="firstname" class="control-label col-lg-2">Firstname</label>
+                    <div class="col-lg-10">
+                      <input class=" form-control" id="firstname" name="firstname" type="text"   />
+                    </div>
+                  </div>
+				  <br/>
+				  <br/> <br/>
+				   <br/>
+				   
+                  <div class="form-group ">
+                    <label for="lastname" class="control-label col-lg-2">Lastname</label>
+                    <div class="col-lg-10">
+                      <input class=" form-control" id="lastname" name="lastname" type="text" />
+                    </div>
+                  </div>
+				  <br/> <br/>
+				   <br/>
+                  <div class="form-group ">
+                    <label for="username" class="control-label col-lg-2">Username</label>
+                    <div class="col-lg-10">
+                      <input class="form-control " id="username" name="username" type="text" />
+                    </div>
+                  </div>
+				  <br/> <br/>
+				   <br/>
+                  <div class="form-group ">
+                    <label for="password" class="control-label col-lg-2">Password</label>
+                    <div class="col-lg-10">
+                      <input class="form-control " id="password" name="password" type="password" />
+                    </div>
+                  </div>
+				  <br/> <br/>
+				   <br/>
+                  <div class="form-group ">
+                    <label for="confirm_password" class="control-label col-lg-2">Confirm Password</label>
+                    <div class="col-lg-10">
+                      <input class="form-control " id="confirm_password" name="confirm_password" type="password" />
+                    </div>
+                  </div>
+				  <br/> <br/>
+				   <br/>
+                  <div class="form-group ">
+                    <label for="email" class="control-label col-lg-2">Email</label>
+                    <div class="col-lg-10">
+                      <input class="form-control " id="email" name="email" type="email" />
+                    </div>
+                  </div>
+				  <br/> <br/>
+				   <br/>
+				   <div class="form-group ">
+                    <label for="designation" class="control-label col-lg-2">Designation</label>
+                    <div class="col-lg-10">
+                      <input class="form-control " id="designation" name="designation" type="designation" />
+                    </div>
+                  </div>
+				  <br/> <br/>
+				   <br/>
+                  <div class="form-group ">
+                    <label for="agree" class="control-label col-lg-2 col-sm-3">Agree to Our Policy</label>
+                    <div class="col-lg-10 col-sm-9">
+                      <input class="form-control " type="checkbox" style="width: 20px;position:absolute;left:50px;height:20px;" class="checkbox form-control" id="agree" name="agree" />
+                    </div>
+                  </div>
+				  <br/> <br/>
+				   <br/>
+                  <div class="form-group ">
+                    <label for="newsletter" class="control-label col-lg-2 col-sm-3">Receive the Newsletter</label>
+                    <div class="col-lg-10 col-sm-9">
+                      <input type="checkbox" style="width: 20px;position:absolute;left:50px;height:20px;"class="checkbox form-control" id="newsletter" name="newsletter" />
+                    </div>
+                  </div>
+				  <br/> <br/>
+				   <br/>
+                  <div class="form-group">
+                    <div class="col-lg-offset-2 col-lg-10">
+                      <input class="btn btn-theme" type="submit" value="send" name="Submit" >
+                      <input class="btn btn-theme04" type="reset" value="Cancel" name="Reset">
+                    </div>
+                  </div>
+				  <br/> <br/>
+				   <br/>
+               <!--</form>-->
+              <!--</div>-->
+            </div>
+            <!-- /form-panel -->
+          </div>
+		  </div>
+</form>
+<!--</div>-->
+          <!-- /col-lg-12 -->
+        </div>
+   <!-- <div class="container">
+      <form class="form-login" action="index.html">
+        <h2 class="form-login-heading">create an account</h2>
+        <div class="login-wrap">
+          <input type="text" class="form-control" placeholder="User ID" autofocus>
+          <br>
+          <input type="password" class="form-control" placeholder="Password">
+          <label class="checkbox">
+            <input type="checkbox" value="remember-me"> Remember me
+            <span class="pull-right">
+            <a data-toggle="modal" href="login.html#myModal"> Forgot Password?</a>
+            </span>
+            </label>
+          <button class="btn btn-theme btn-block" href="index.html" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
+          <hr>-->
+         <!-- <div class="login-social-link centered">
+            <p>or you can sign in via your social network</p>
+            <button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button>
+            <button class="btn btn-twitter" type="submit"><i class="fa fa-twitter"></i> Twitter</button>
+          </div>-->
+          <!--<div class="registration">
+            Don't have an account yet?<br/>
+            <a class="" href="form_validation.html">
+              Create an account
+              </a>
+          </div>-->
+        </div>
+        <!-- Modal -->
+        <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Forgot Password ?</h4>
+              </div>
+              <div class="modal-body">
+                <p>Enter your e-mail address below to reset your password.</p>
+                <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+              </div>
+              <div class="modal-footer">
+                <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
+                <button class="btn btn-theme" type="button">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- modal -->
+      </form>
+    </div>
+  </div>
+  <!-- js placed at the end of the document so the pages load faster -->
+  <script src="static/lib/jquery/jquery.min.js"></script>
+  <script src="static/lib/bootstrap/js/bootstrap.min.js"></script>
+  <!--BACKSTRETCH-->
+  <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+  <script type="text/javascript" src="static/lib/jquery.backstretch.min.js"></script>
+  <script type="text/javascript">
+ 
+  function GEEKFORGEEKS()                                    
+{ var illegalChars = /\W/;
+ var illegalChars1 = /[\W_]/;
+    var name1 = document.forms["RegForm"]["firstname"];  
+var name2 = document.forms["RegForm"]["lastname"];   
+var name3 = document.forms["RegForm"]["username"];   	
+    var email1 = document.forms["RegForm"]["email"];   
+ var des = document.forms["RegForm"]["designation"]; 	
+   // var phone = document.forms["RegForm"]["Telephone"];  
+   // var what =  document.forms["RegForm"]["Subject"];  
+    var password = document.forms["RegForm"]["password"];  
+	 var cpassword = document.forms["RegForm"]["confirm_password"]; 
+    var address = document.forms["RegForm"]["Address"];  
+   
+    if (name1.value == "")                                  
+    { 
+        window.alert("Please enter your first name."); 
+        name1.focus(); 
+        return false; 
+    } 
+	else if ((name1.value.length < 5) || (name1.value.length > 15)) {
+       // fld.style.background = 'Yellow';
+	   window.alert("The firstname is the wrong length.\n"); 
+        name1.focus(); 
+        return false; 
+        
+ 
+    } else if (illegalChars.test(name1.value)) {
+        //fld.style.background = 'Yellow';
+		 window.alert("The firstname contains illegal characters.\n"); 
+        name1.focus(); 
+       
+		return false;
+ 
+    } 
+   if (name2.value == "")                                  
+    { 
+        window.alert("Please enter your lastname."); 
+        name2.focus(); 
+        return false; 
+    } 
+	else if ((name2.value.length < 5) || (name2.value.length > 15)) {
+       // fld.style.background = 'Yellow';
+	   window.alert("The lastname is the wrong length.\n"); 
+        name2.focus(); 
+        return false; 
+        
+ 
+    } else if (illegalChars.test(name2.value)) {
+        //fld.style.background = 'Yellow';
+		 window.alert("The lastname contains illegal characters.\n"); 
+        name2.focus(); 
+       
+		return false;
+ 
+    } 
+	if (name3.value == "")                                  
+    { 
+        window.alert("Please enter your username."); 
+        name3.focus(); 
+        return false; 
+    } 
+	else if ((name3.value.length < 5) || (name3.value.length > 15)) {
+       // fld.style.background = 'Yellow';
+	   window.alert("The username is the wrong length.\n"); 
+        name3.focus(); 
+        return false; 
+        
+ 
+    } else if (illegalChars.test(name3.value)) {
+        //fld.style.background = 'Yellow';
+		 window.alert("The username contains illegal characters.\n"); 
+        name3.focus(); 
+       
+		return false;
+ 
+    } 
+	 if (password.value == "")                        
+    { 
+        window.alert("Please enter your password"); 
+        password.focus(); 
+        return false; 
+    } 
+	else if ((password.value.length < 7) || (password.value.length > 15)) {
+       // fld.style.background = 'Yellow';
+	   window.alert("The username is the wrong length.\n"); 
+        password.focus(); 
+        return false; 
+        
+ 
+    } else if (illegalChars.test(password.value)) {
+        //fld.style.background = 'Yellow';
+		 window.alert("The username contains illegal characters.\n"); 
+        password.focus(); 
+       
+		return false;
+ 
+    }  else if ( (password.value.search(/[a-zA-Z]+/)==-1) || (password.value.search(/[0-9]+/)==-1) ) {
+       
+       window.alert("The password must contain at least one numeral.\n"); 
+        password.focus(); 
+        return false;
+ 
+    }
+   if (cpassword.value == "")                        
+    { 
+        window.alert("verify your password"); 
+        cpassword.focus(); 
+        return false; 
+    } 
+	else if(cpassword.value!=password.value){
+	 window.alert("Password didnt match"); 
+        cpassword.focus(); 
+        return false; 
+	
+   }
+    if (email1.value == "")                                   
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+	
+   
+    if (email1.value.indexOf("@", 0) < 0)                 
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    if (email1.value.indexOf(".", 0) < 0)                 
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+   if (des.value == "")                                  
+    { 
+        window.alert("Please enter your designation."); 
+        des.focus(); 
+        return false; 
+    } 
+    
+   
+   
+    if (what.selectedIndex < 1)                  
+    { 
+        alert("Please enter your course."); 
+        what.focus(); 
+        return false; 
+    } 
+   
+    return true; 
+}
+  function validate()
+{
+    if(   document.getElementById("firstname").value=="harshitha"
+       && document.getElementById("lastname").value == "velpula" )
+    {
+        alert( "validation succeeded" );
+        location.href="index_Copy.html";
+		return true;
+    }
+    else
+    {
+        alert( "validation failed" );
+        location.href="form_validation.html";
+		return false;
+    }
+}
+function validateUsername(fld) {
+    var error = "";
+    var illegalChars = /\W/; // allow letters, numbers, and underscores
+ 
+    if (fld.value == "") {
+        fld.style.background = 'Yellow';
+        error = "You didn't enter a username.\n";
+        alert(error);
+        return false;
+ 
+    } else if ((fld.value.length < 5) || (fld.value.length > 15)) {
+        fld.style.background = 'Yellow';
+        error = "The username is the wrong length.\n";
+		alert(error);
+		return false;
+ 
+    } else if (illegalChars.test(fld.value)) {
+        fld.style.background = 'Yellow';
+        error = "The username contains illegal characters.\n";
+		alert(error);
+		return false;
+ 
+    } else {
+        fld.style.background = 'White';
+    }
+    return true;
+}
+    $.backstretch("static/img/bg2.jpg", {
+      speed: 500
+    });
+  </script>
+</body>
+
+</html>

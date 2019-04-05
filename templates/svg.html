@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="Dashboard">
+  <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+  <title>Report</title>
+  <style type="text/css">
+  .back {
+  text-align:center;
+    background-color:#C5CECD;
+   width:60%;
+    margin: 5px;
+	padding:5px;
+}
+.back1 {
+	text-align:left;
+    background-color:#EDEEEE;
+    width:300px;
+	height:75%;
+    margin: 5px;
+	padding:15px;
+}
+  #wrapper {
+  position: relative;
+  margin: auto;
+}
+#meter {
+  width: 100%; height: 100%;
+  transform: rotateX(180deg);
+}
+.circle {
+  fill: none;
+}
+.outline, #mask {
+  stroke: #F1F1F1;
+  stroke-width: 65;
+}
+.range {
+  stroke-width: 60;
+}
+#slider, #lbl {
+  position: absolute;
+}
+#slider {
+  cursor: pointer;
+  left: 0;
+  margin: auto;
+  right: 0;
+  top: 58%;
+  width: 40%;
+}
+#lbl {
+  background-color: #4B4C51;
+  border-radius: 2px;
+  color: white;
+  font-family: 'courier new';
+  font-size: 15pt;
+  font-weight: bold;
+  padding: 4px 4px 2px 4px;
+  right: -15px;
+  top: 57%;
+}
+#meter_needle {
+  height: 40%;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 10%;
+  transform-origin: bottom center;
+  /*orientation fix*/
+  transform: rotate(270deg);
+
+}
+</style>
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Bootstrap core CSS -->
+  <link href="{{url_for('static',filename='lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <!--external css-->
+  <link href="{{url_for('static',filename='lib/font-awesome/css/font-awesome.css')}}" rel="stylesheet" />
+  <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+  <!-- Custom styles for this template -->
+  <link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet">
+  <link href="{{url_for('static',filename='css/style-responsive.css')}}" rel="stylesheet">
+
+  <!-- =======================================================
+    Template Name: Dashio
+    Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
+    Author: TemplateMag.com
+    License: https://templatemag.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+  <section id="container">
+    <!-- **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        *********************************************************************************************************************************************************** -->
+    <!--header start-->
+    <header class="header black-bg">
+      <div class="sidebar-toggle-box">
+        <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+      </div>
+      <!--logo start-->
+      <a href="index.html" class="logo"><b>KG<span>INFOSYSTEMS</span></b></a>
+      <!--logo end-->
+      <div class="nav notify-row" id="top_menu">
+        <!--  notification start -->
+        <ul class="nav top-menu">
+          <!-- settings start -->
+          <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+              <i class="fa fa-tasks"></i>
+              <span class="badge bg-theme">4</span>
+              </a>
+            <ul class="dropdown-menu extended tasks-bar">
+              <div class="notify-arrow notify-arrow-green"></div>
+              <li>
+                <p class="green">You have 4 pending tasks</p>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <div class="task-info">
+                    <div class="desc">Dashio Admin Panel</div>
+                    <div class="percent">40%</div>
+                  </div>
+                  <div class="progress progress-striped">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                      <span class="sr-only">40% Complete (success)</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <div class="task-info">
+                    <div class="desc">Database Update</div>
+                    <div class="percent">60%</div>
+                  </div>
+                  <div class="progress progress-striped">
+                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                      <span class="sr-only">60% Complete (warning)</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <div class="task-info">
+                    <div class="desc">Product Development</div>
+                    <div class="percent">80%</div>
+                  </div>
+                  <div class="progress progress-striped">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                      <span class="sr-only">80% Complete</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <div class="task-info">
+                    <div class="desc">Payments Sent</div>
+                    <div class="percent">70%</div>
+                  </div>
+                  <div class="progress progress-striped">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                      <span class="sr-only">70% Complete (Important)</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="external">
+                <a href="#">See All Tasks</a>
+              </li>
+            </ul>
+          </li>
+          <!-- settings end -->
+          <!-- inbox dropdown start-->
+          <li id="header_inbox_bar" class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+              <i class="fa fa-envelope-o"></i>
+              <span class="badge bg-theme">5</span>
+              </a>
+            <ul class="dropdown-menu extended inbox">
+              <div class="notify-arrow notify-arrow-green"></div>
+              <li>
+                <p class="green">You have 5 new messages</p>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <span class="photo"><img alt="avatar" src="img/ui-zac.jpg"></span>
+                  <span class="subject">
+                  <span class="from">Zac Snider</span>
+                  <span class="time">Just now</span>
+                  </span>
+                  <span class="message">
+                  Hi mate, how is everything?
+                  </span>
+                  </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <span class="photo"><img alt="avatar" src="img/ui-divya.jpg"></span>
+                  <span class="subject">
+                  <span class="from">Divya Manian</span>
+                  <span class="time">40 mins.</span>
+                  </span>
+                  <span class="message">
+                  Hi, I need your help with this.
+                  </span>
+                  </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <span class="photo"><img alt="avatar" src="img/ui-danro.jpg"></span>
+                  <span class="subject">
+                  <span class="from">Dan Rogers</span>
+                  <span class="time">2 hrs.</span>
+                  </span>
+                  <span class="message">
+                  Love your new Dashboard.
+                  </span>
+                  </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <span class="photo"><img alt="avatar" src="img/ui-sherman.jpg"></span>
+                  <span class="subject">
+                  <span class="from">Dj Sherman</span>
+                  <span class="time">4 hrs.</span>
+                  </span>
+                  <span class="message">
+                  Please, answer asap.
+                  </span>
+                  </a>
+              </li>
+              <li>
+                <a href="index.html#">See all messages</a>
+              </li>
+            </ul>
+          </li>
+          <!-- inbox dropdown end -->
+          <!-- notification dropdown start-->
+          <li id="header_notification_bar" class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+              <i class="fa fa-bell-o"></i>
+              <span class="badge bg-warning">7</span>
+              </a>
+            <ul class="dropdown-menu extended notification">
+              <div class="notify-arrow notify-arrow-yellow"></div>
+              <li>
+                <p class="yellow">You have 7 new notifications</p>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                  Server Overloaded.
+                  <span class="small italic">4 mins.</span>
+                  </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <span class="label label-warning"><i class="fa fa-bell"></i></span>
+                  Memory #2 Not Responding.
+                  <span class="small italic">30 mins.</span>
+                  </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                  Disk Space Reached 85%.
+                  <span class="small italic">2 hrs.</span>
+                  </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <span class="label label-success"><i class="fa fa-plus"></i></span>
+                  New User Registered.
+                  <span class="small italic">3 hrs.</span>
+                  </a>
+              </li>
+              <li>
+                <a href="index.html#">See all notifications</a>
+              </li>
+            </ul>
+          </li>
+          <!-- notification dropdown end -->
+        </ul>
+        <!--  notification end -->
+      </div>
+      <div class="top-menu">
+        <ul class="nav pull-right top-menu">
+          <li><a class="logout" href="login.html">Logout</a></li>
+        </ul>
+      </div>
+    </header>
+    <!--header end-->
+    <!-- **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+     <aside>
+      <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu" id="nav-accordion">
+          <p class="centered"><a href="profile.html"><img src="img/ui-sam.jpg" class="img-circle" width="80"></a></p>
+          <h5 class="centered">Sam Soffes</h5>
+          <li class="mt">
+            <a class="active" href="index - Copy.html">
+              <i class="fa fa-dashboard"></i>
+              <span>Dashboard</span>
+              </a>
+          </li>
+          <li class="sub-menu">
+            <a  href="javascript:;">
+              <i class=" fa fa-bar-chart-o"></i>
+              <span>Reports</span>
+              </a>
+            <ul class="sub">
+            	<li><a href="projectreport.html">Project Report</a></li>
+            	<li><a href="xchart.html">Member Report</a>
+            </ul>
+          </li>
+          
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-tasks"></i>
+              <span>Tasks</span>
+              </a>
+            <ul class="sub">
+              <li><a href="todo_list.html">Todo List</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-desktop"></i>
+              <span>Projects</span>
+              </a>
+            <ul class="sub">
+              <li><a href="manageproject.html">Manage Projects</a></li>
+              <li><a href="viewproject.html">View Projects</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-th"></i>
+              <span>Employee Tables</span>
+              </a>
+            <ul class="sub">
+              <li><a href="responsive_table.html">Employee Table</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="login.html">
+              <i class="fa fa-map-marker"></i>
+              <span>LogOut</span>
+              </a>
+          </li>
+        </ul>
+        <!-- sidebar menu end-->
+      </div>
+    </aside>
+    <!--sidebar end-->
+    <!-- **********************************************************************************************************************************************************
+        MAIN CONTENT
+        *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+       <section id="main-content">
+      <section class="wrapper site-min-height">
+        <h3><i class="fa fa-angle-right"></i> REPORT</h3>
+		<h3> EFFECIENCY </h3>
+        
+          		  
+				  <div id="wrapper">
+    <svg id="meter">
+        <circle id="outline_curves" class="circle outline" 
+        cx="50%" cy="50%"></circle>
+         
+        <circle id="low" class="circle range" cx="50%" cy="50%"
+        stroke="#FDE47F"></circle>
+         
+        <circle id="avg" class="circle range" cx="50%" cy="50%"
+        stroke="#7CCCE5"></circle>
+         
+        <circle id="high" class="circle range" cx="50%" cy="50%"
+        stroke="#E04644"></circle>
+         
+        <circle id="mask" class="circle" cx="50%" cy="50%" >
+        </circle>
+         
+        <circle id="outline_ends" class="circle outline"
+        cx="50%" cy="50%"></circle>
+    </svg>
+    <img id="meter_needle" src="static/svg-meter-gauge-needle.svg" alt="" />
+
+    <label id="lbl" id="value" for="">0</label>
+
+</div>
+<center>
+<div class="back">
+<table>       
+           <tr>
+		   <td>
+		   <div class="back1">
+<h3> Effeciency of Employee :         </h3> 
+<h3> Number of Projects worked:       </h3>
+<h3> Effeciency can be improved if    </h3>
+<p>         </p>
+<p>         </p>
+<p>         </p>
+</td>
+</div>
+		   
+<td>
+
+<div id="morris">
+    		   
+                <div id="hero-donut" class="graph"></div>
+                  
+				  
+				 
+<div id="hero-graph"></div>
+</div>
+	
+</td>
+</table> </center>     </section>
+
+	
+      <!-- /wrapper -->
+    </section>
+    <!-- /MAIN CONTENT -->
+    <!--main content end-->
+    <!--footer start-->
+    <footer class="site-footer">
+      <div class="text-center">
+        <p>
+          <strong>TELEOS</strong>
+        </p>
+        <div class="credits">
+          <!--
+            You are NOT allowed to delete the credit link to TemplateMag with free version.
+            You can delete the credit link only if you bought the pro version.
+            Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/dashio-bootstrap-admin-template/
+            Licensing information: https://templatemag.com/license/
+          -->
+             </div>
+        <a href="morris.html#" class="go-top">
+          <i class="fa fa-angle-up"></i>
+          </a>
+      </div>
+    </footer>
+    <!--footer end-->
+  </section>
+  <!-- js placed at the end of the document so the pages load faster -->
+  <script src="static/lib/jquery/jquery.min.js"></script>
+  <script src="static/lib/bootstrap/js/bootstrap.min.js"></script>
+  <script class="include" type="text/javascript" src="static/lib/jquery.dcjqaccordion.2.7.js"></script>
+  <script src="static/lib/jquery.scrollTo.min.js"></script>
+  <script src="static/lib/jquery.nicescroll.js" type="text/javascript"></script>
+  <script src="static/lib/raphael/raphael.min.js"></script>
+  <script src="static/lib/morris/morris.min.js"></script>
+  <!--common script for all pages-->
+  <script src="static/lib/common-scripts.js"></script>
+  <!--script for this page-->
+  <script src="static/lib/morris-conf.js"></script>
+   <script>
+  var r = 135;
+var circles = document.querySelectorAll('.circle');
+var total_circles = circles.length;
+for (var i = 0; i < total_circles; i++) {
+    circles[i].setAttribute('r', r);
+}
+ 
+/* Set meter's wrapper dimension */
+var meter_dimension = (r * 2) + 100;
+var wrapper = document.querySelector("#wrapper");
+wrapper.style.width = meter_dimension + "px";
+wrapper.style.height = meter_dimension + "px";
+ 
+/* Add strokes to circles  */
+var cf = 2 * Math.PI * r;
+var semi_cf = cf / 2;
+var semi_cf_1by3 = semi_cf / 3;
+var semi_cf_2by3 = semi_cf_1by3 * 2;
+document.querySelector("#outline_curves")
+    .setAttribute("stroke-dasharray", semi_cf + "," + cf);
+document.querySelector("#low")
+    .setAttribute("stroke-dasharray", semi_cf + "," + cf);
+document.querySelector("#avg")
+    .setAttribute("stroke-dasharray", semi_cf_2by3 + "," + cf);
+document.querySelector("#high")
+    .setAttribute("stroke-dasharray", semi_cf_1by3 + "," + cf);
+document.querySelector("#outline_ends")
+    .setAttribute("stroke-dasharray", 2 + "," + (semi_cf - 2));
+document.querySelector("#mask")
+    .setAttribute("stroke-dasharray", semi_cf + "," + cf);
+ 
+/* Bind range slider event*/
+var slider = document.querySelector("#slider");
+var lbl = document.querySelector("#lbl");
+var mask = document.querySelector("#mask");
+var meter_needle =  document.querySelector("#meter_needle");
+ 
+
+function func1(){
+  
+  var percent = 76%;
+    var meter_value = semi_cf - ((percent * semi_cf) / 100);
+    mask.setAttribute("stroke-dasharray", meter_value + "," + cf);
+    meter_needle.style.transform = "rotate(" + 
+        (270 + ((percent * 180) / 100)) + "deg)";
+    lbl.textContent = percent + "%";
+}
+window.onload=func1;
+</script>
+
+</body>
+
+</html>

@@ -39,7 +39,7 @@ def login():
 		call(['python',path])
 	processThread= threading.Thread(target=thread_second)
 	processThread.start()	
-	return render_template('login.html')
+	return redirect(url_for('manager'))
 
 @app.route('/form_validation',methods=['GET','POST'])
 def form_validation(): 

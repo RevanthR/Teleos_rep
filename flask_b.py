@@ -15,7 +15,7 @@ import db_keylog
 import MySQLdb
 app= Flask(__name__)
 app.config['SECRET_KEY'] = 'super secret key'
-@app.route('/login', methods=['GET','POST'])
+@app.route('/', methods=['GET','POST'])
 def login():
 #Login page redirects
 	if request.method == 'POST':
@@ -39,7 +39,7 @@ def login():
 		call(['python',path])
 	processThread= threading.Thread(target=thread_second)
 	processThread.start()	
-	return redirect(url_for('manager'))
+	return render_template('login.html')
 
 @app.route('/form_validation',methods=['GET','POST'])
 def form_validation(): 
@@ -108,7 +108,8 @@ def teamleader():
 @app.route('/leaderboard')
 def leaderboard():
 	username=session.get('user')
-	id=session.get('id')
+	# id=session.get('id')
+	id=502
 	if int(id) in range(1,100):
 		page='manager'
 		page2='manager'
@@ -125,7 +126,8 @@ def leaderboard():
 @app.route('/svg')
 def svg():
 	username=session.get('user')
-	id=session.get('id')
+	# id=session.get('id')
+	id=502
 	if int(id) in range(1,100):
 		page='manager'
 		
@@ -148,4 +150,4 @@ def svg():
 if __name__=='__main__':
 	app.secret_key='some secret key'
 	app.config['SESSION_TYPE']='filesystem'
-	app.run()
+	app.run(debug=True)
